@@ -11,6 +11,7 @@ class DashBoardController extends GetxController {
     // Add more courses as needed
   ];
   late Set<int> offlineList ={};
+  Set<int> myCourse ={0};
   int selectedIndex = 0;
 
   var currentTime = DateTime.now();

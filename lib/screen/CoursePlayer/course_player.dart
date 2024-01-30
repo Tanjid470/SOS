@@ -177,10 +177,10 @@ class _CoursePlayerPageState extends State<CoursePlayerPage> {
                 onPressed: () {
                   
                   if(!dashBoardController.offlineList.add(currentModuleIndex)){
-                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Already available in offline")));
+                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Already available in offline"),duration: Duration(milliseconds: 2)));
                   }
                   else{
-                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Download Sueecssfully"),duration: Duration(milliseconds: 1),));
+                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Download Sueecssfully"),duration: Duration(milliseconds: 2),));
                   }
                 dashBoardController.offlineList.add(currentModuleIndex);
 

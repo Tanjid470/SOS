@@ -24,24 +24,26 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: AnimatedSplashScreen(
-        splash:const Text(".",style: TextStyle(color: Colors.white,fontSize:100 ),),
-        //  Icon(Icons.music_note,color: AppColors.bgcolor,size: 100,), 
-        splashIconSize: 100,
-        duration: 100,
-        animationDuration: Duration(seconds: 2),
-        splashTransition: SplashTransition.rotationTransition,
-        backgroundColor: AppColors.purple,
-        nextScreen: StreamBuilder(
-      stream: FirebaseAuth.instance.authStateChanges(),
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return const Home();
-        } else {
-          return const LoginForm();
-        }
-      },
-    ), 
+      body: Center(
+        child: AnimatedSplashScreen(
+          splash:const Text("Softmax",style: TextStyle(color: Colors.white,fontSize:70 ),),
+          //  Icon(Icons.music_note,color: AppColors.bgcolor,size: 100,), 
+          splashIconSize: 100,
+          duration: 150,
+          animationDuration: Duration(seconds: 2),
+          splashTransition: SplashTransition.fadeTransition,
+          backgroundColor: AppColors.purple,
+          nextScreen: StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return const Home();
+          } else {
+            return const LoginForm();
+          }
+        },
+          ), 
+        ),
       )
     );
   }
