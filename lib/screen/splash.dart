@@ -7,6 +7,7 @@ import 'package:edtech/screen/Authentication/login_From.dart';
 import 'package:edtech/screen/Dashboard/dashBoard.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_windowmanager/flutter_windowmanager.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -17,7 +18,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
   @override
+  void initState() {
+    // TODO: implement initState
+    FlutterWindowManager.addFlags(FlutterWindowManager.FLAG_SECURE);
+    super.initState();
+  }
+ 
 
 
   

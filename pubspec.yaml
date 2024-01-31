@@ -44,6 +44,7 @@ dependencies:
   youtube_player_flutter: ^8.1.2
   animated_splash_screen:
   animated_text_kit: any
+  flutter_windowmanager: ^0.2.0
   
 dev_dependencies:
   flutter_test:
